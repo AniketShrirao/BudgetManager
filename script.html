@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date Format Converter</title>
+</head>
+<body>
+  <h1>Date Format Converter</h1>
+  <p>Check the console for the transformed JSON output.</p>
+  
+  <script>
+    function transformKeys(json) {
+      return json.map(item => {
+        // Reformat the date
+        
+        // Rename keys as per the updated format
+        const transformedItem = {
+          date: item.date,
+          category: item.category,
+          description: item.description,
+          expense: item.expense,
+          important: item.imp || false, // If 'imp' exists, rename it to 'important'
+          oncePerMonth: item.once || false, // Rename 'once' to 'oncePerMonth'
+          oncePerQuarter: item.onceQuarter || false, // Rename 'onceQuarter'
+          type: item.type
+        };
+
+        // Return the transformed item
+        return transformedItem;
+      });
+    }
+
+    // Fetch JSON and transform dates
+    fetch("./src/data/janTransactions.json")
+      .then(response => response.json())
+      .then(janTransactions => {
+        console.log("Fetched JSON:", janTransactions);  // Log fetched JSON
+        const updatedJson = transformKeys(janTransactions);
+        console.log("Original JSON:", janTransactions);
+        console.log("Updated JSON:", updatedJson);
+      })
+      .catch(error => console.error("Error loading JSON:", error));
+  </script>
+</body>
+</html>

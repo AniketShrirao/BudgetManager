@@ -1,0 +1,492 @@
+[
+    {
+        "date": "2025-01-01",
+        "category": "Food",
+        "description": "Naturals",
+        "expense": 620,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-01",
+        "category": "Food",
+        "description": "shawrma",
+        "expense": 380,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-01",
+        "category": "Savings",
+        "description": "mom dad Health Insurance",
+        "expense": 1116,
+        "important": true,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Investments"
+    },
+    {
+        "date": "2025-01-01",
+        "category": "Savings",
+        "description": "Term Insurance",
+        "expense": 3080,
+        "important": true,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Investments"
+    },
+    {
+        "date": "2025-01-02",
+        "category": "Home",
+        "description": "Mom",
+        "expense": 15000,
+        "important": true,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Needs"
+    },
+    {
+        "date": "2025-01-02",
+        "category": "Savings",
+        "description": "Zerodha Bucket",
+        "expense": 5000,
+        "important": true,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Investments"
+    },
+    {
+        "date": "2025-01-02",
+        "category": "Savings",
+        "description": "Emergency Fund",
+        "expense": 20000,
+        "important": true,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Investments"
+    },
+    {
+        "date": "2025-01-02",
+        "category": "Savings",
+        "description": "Mutual Funds",
+        "expense": 17609,
+        "important": true,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Investments"
+    },
+    {
+        "date": "2025-01-04",
+        "category": "Transportation",
+        "description": "Train Pass",
+        "expense": 1105,
+        "important": true,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Needs"
+    },
+    {
+        "date": "2025-01-04",
+        "category": "Food",
+        "description": "Dinner with clg friends",
+        "expense": 1190,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-05",
+        "category": "Utilities",
+        "description": "Recharge",
+        "expense": 349,
+        "important": true,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Needs"
+    },
+    {
+        "date": "2025-01-05",
+        "category": "Shopping",
+        "description": "Wireless Mouse",
+        "expense": 2498,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-05",
+        "category": "Savings",
+        "description": "Kaka Insurance",
+        "expense": 4067,
+        "important": true,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Investments"
+    },
+    {
+        "date": "2025-01-05",
+        "category": "Food",
+        "description": "Clg group outing",
+        "expense": 1190,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-05",
+        "category": "Utilities",
+        "description": "EMI",
+        "expense": 793,
+        "important": true,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Needs"
+    },
+    {
+        "date": "2025-01-06",
+        "category": "Utilities",
+        "description": "EMI",
+        "expense": 4185,
+        "important": true,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Needs"
+    },
+    {
+        "date": "2025-01-06",
+        "category": "Food",
+        "description": "Jumbo Burger",
+        "expense": 99,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-06",
+        "category": "Food",
+        "description": "The Three group outing",
+        "expense": 210,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-07",
+        "category": "Food",
+        "description": "Chocolate Shake",
+        "expense": 120,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-07",
+        "category": "Food",
+        "description": "office break food",
+        "expense": 30,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-08",
+        "category": "Food",
+        "description": "office break food",
+        "expense": 40,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-08",
+        "category": "Entertainment",
+        "description": "Netflix",
+        "expense": 649,
+        "important": true,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-08",
+        "category": "Food",
+        "description": "Kaku Birthday",
+        "expense": 848,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-09",
+        "category": "Utilities",
+        "description": "google one",
+        "expense": 130,
+        "important": true,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Needs"
+    },
+    {
+        "date": "2025-01-10",
+        "category": "Other",
+        "description": "Nahik Melava book",
+        "expense": 350,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Needs"
+    },
+    {
+        "date": "2025-01-11",
+        "category": "Utilities",
+        "description": "Akshat Srivastava",
+        "expense": 159,
+        "important": true,
+        "oncePerMonth": true,
+        "oncePerQuarter": false,
+        "type": "Needs"
+    },
+    {
+        "date": "2025-01-11",
+        "category": "Food",
+        "description": "Arabian express",
+        "expense": 785,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-12",
+        "category": "Utilities",
+        "description": "internet",
+        "expense": 700,
+        "important": true,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Needs"
+    },
+    {
+        "date": "2025-01-12",
+        "category": "Food",
+        "description": "egg junction",
+        "expense": 200,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-13",
+        "category": "Food",
+        "description": "office break food",
+        "expense": 30,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-13",
+        "category": "Food",
+        "description": "office break food",
+        "expense": 70,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-15",
+        "category": "Food",
+        "description": "office break food",
+        "expense": 40,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-15",
+        "category": "Groceries",
+        "description": "Mom Atta",
+        "expense": 1459,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": true,
+        "type": "Needs"
+    },
+    {
+        "date": "2025-01-15",
+        "category": "Entertainment",
+        "description": "Coldplay Concert",
+        "expense": 7329,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-15",
+        "category": "Utilities",
+        "description": "EMI due",
+        "expense": 5983,
+        "important": false,
+        "oncePerMonth": true,
+        "oncePerQuarter": false,
+        "type": "Needs"
+    },
+    {
+        "date": "2025-01-15",
+        "category": "Food",
+        "description": "office break food",
+        "expense": 40,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-15",
+        "category": "Food",
+        "description": "Biryani",
+        "expense": 1510,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-16",
+        "category": "Utilities",
+        "description": "Dad's phone bill",
+        "expense": 3500,
+        "important": false,
+        "oncePerMonth": true,
+        "oncePerQuarter": false,
+        "type": "Needs"
+    },
+    {
+        "date": "2025-01-16",
+        "category": "Food",
+        "description": "Zomato",
+        "expense": 1019,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-16",
+        "category": "Food",
+        "description": "Zomato",
+        "expense": 491,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-19",
+        "category": "Food",
+        "description": "Shawrma",
+        "expense": 420,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-19",
+        "category": "Groceries",
+        "description": "swiggy Instamart Harpic",
+        "expense": 343,
+        "important": true,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Needs"
+    },
+    {
+        "date": "2025-01-19",
+        "category": "Entertainment",
+        "description": "Bassi Show",
+        "expense": 2000,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-20",
+        "category": "Utilities",
+        "description": "google",
+        "expense": 129,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Needs"
+    },
+    {
+        "date": "2025-01-21",
+        "category": "Food",
+        "description": "Zomato Ice Cream",
+        "expense": 473,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-21",
+        "category": "Entertainment",
+        "description": "Netflix",
+        "expense": 649,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    },
+    {
+        "date": "2025-01-21",
+        "category": "Utilities",
+        "description": "electricity bill",
+        "expense": 3554,
+        "important": true,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Needs"
+    },
+    {
+        "date": "2025-01-22",
+        "category": "Marraige",
+        "description": "Not specified",
+        "expense": 20000,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Saving"
+    },
+    {
+        "date": "2025-02-21",
+        "category": "Food",
+        "description": "Naturals",
+        "expense": 620,
+        "important": false,
+        "oncePerMonth": false,
+        "oncePerQuarter": false,
+        "type": "Wants"
+    }
+]
