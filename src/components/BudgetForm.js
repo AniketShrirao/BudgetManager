@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { TextField, Button, Grid, MenuItem, FormControlLabel, Checkbox, Typography } from "@mui/material";
 import { categories } from "../data/categories";
+import { addTransaction } from "../services/transactionsService";  // Import service
 
 export const BudgetForm = ({ handleAddTransaction }) => {
   const [form, setForm] = useState({
@@ -11,10 +12,10 @@ export const BudgetForm = ({ handleAddTransaction }) => {
     expense: "",
     type: "Needs",
     important: false,
-    oncePerMonth: false,
-    oncePerQuarter: false,
+    once_per_month: false,
+    once_per_quarter: false,
   });
-  
+
   const [newCategory, setNewCategory] = useState("");
   const [error, setError] = useState("");
 
@@ -40,27 +41,44 @@ export const BudgetForm = ({ handleAddTransaction }) => {
     }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     // Validation for required fields
     if (!form.date || !form.category || !form.expense || !form.type) {
       setError("Please fill in all required fields: Date, Category, Expense, and Type.");
       return;
     }
-    
-    setError(""); // Clear any previous error
-    console.log(form); // Log the form to ensure data is correct
-    handleAddTransaction({ ...form, expense: parseFloat(form.expense) });
-    setForm({
-      ...form,
-      date: new Date().toISOString().split("T")[0],
-      category: "",
-      description: "",
-      expense: "",
-      type: "Needs",
-      important: false,
-      oncePerMonth: false,
-      oncePerQuarter: false,
-    });
+
+    try {
+      // Call addTransaction from service
+      const data = await addTransaction({
+        date: form.date,
+        category: form.category,
+        description: form.description,
+        expense: parseFloat(form.expense),
+        type: form.type,
+        important: form.important,
+        once_per_month: form.once_per_month,
+        once_per_quarter: form.once_per_quarter,
+      });
+
+      console.log("Transaction added:", data);
+      handleAddTransaction(data[0]);  // Pass added transaction to parent
+
+      // Reset form after successful submission
+      setForm({
+        date: new Date().toISOString().split("T")[0],
+        category: "",
+        description: "",
+        expense: "",
+        type: "Needs",
+        important: false,
+        once_per_month: false,
+        once_per_quarter: false,
+      });
+    } catch (error) {
+      console.error("Error inserting transaction:", error);
+      setError("Error inserting transaction. Please try again.");
+    }
   };
 
   return (
@@ -121,11 +139,11 @@ export const BudgetForm = ({ handleAddTransaction }) => {
           label="Important"
         />
         <FormControlLabel
-          control={<Checkbox checked={form.oncePerMonth} name="oncePerMonth" onChange={handleChange} />}
+          control={<Checkbox checked={form.once_per_month} name="once_per_month" onChange={handleChange} />}
           label="Once Per Month"
         />
         <FormControlLabel
-          control={<Checkbox checked={form.oncePerQuarter} name="oncePerQuarter" onChange={handleChange} />}
+          control={<Checkbox checked={form.once_per_quarter} name="once_per_quarter" onChange={handleChange} />}
           label="Once Per Quarter"
         />
       </Grid>
@@ -141,15 +159,6 @@ export const BudgetForm = ({ handleAddTransaction }) => {
           </Typography>
         </Grid>
       )}
-      {/* <Grid item xs={12}>
-        <TextField
-          fullWidth
-          label="Add Custom Category"
-          value={newCategory}
-          onChange={(e) => setNewCategory(e.target.value)}
-        />
-        <Button onClick={handleAddCategory} color="secondary">Add Category</Button>
-      </Grid> */}
     </Grid>
   );
 };

@@ -1,4 +1,4 @@
-//TransactionsTable.js
+// TransactionTable.js
 import React from "react";
 import {
   Table,
@@ -15,16 +15,19 @@ import {
   DialogContent,
   DialogTitle,
   Button,
+  IconButton,
   useTheme,
   useMediaQuery,
 } from "@mui/material";
+import DeleteIcon from "@mui/icons-material/Delete"; // Importing Delete Icon
+import { deleteTransaction } from "../services/transactionsService";
 
-export const TransactionsTable = ({ transactions, page, setPage }) => {
+export const TransactionsTable = ({ transactions, setTransactions, page, setPage }) => {
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const [openDialog, setOpenDialog] = React.useState(false);
   const [selectedTxn, setSelectedTxn] = React.useState(null);
   const theme = useTheme();
-  
+
   // Mobile and tablet detection below 1024px
   const isMobileOrTablet = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -40,10 +43,10 @@ export const TransactionsTable = ({ transactions, page, setPage }) => {
   };
 
   // Determine row highlight color for colorblind accessibility
-  const getRowColor = ({ important, oncePerMonth, oncePerQuarter }) => {
+  const getRowColor = ({ important, once_per_month, once_per_quarter }) => {
     if (important) return "#FFB6B6"; // Soft red for important (colorblind-safe)
-    if (oncePerQuarter) return "#B0C4DE"; // Light blue for once per quarter (colorblind-safe)
-    if (oncePerMonth) return "#98FB98"; // Light green for once per month (colorblind-safe)
+    if (once_per_quarter) return "#B0C4DE"; // Light blue for once per quarter (colorblind-safe)
+    if (once_per_month) return "#98FB98"; // Light green for once per month (colorblind-safe)
     return "transparent"; // Default
   };
 
@@ -54,10 +57,10 @@ export const TransactionsTable = ({ transactions, page, setPage }) => {
     if (txn.important) {
       color = "#FF6A6A"; // Strong red for important (colorblind-safe)
       label = "Important";
-    } else if (txn.oncePerQuarter) {
+    } else if (txn.once_per_quarter) {
       color = "#87CEFA"; // Sky blue for once per quarter (colorblind-safe)
       label = "Quarterly";
-    } else if (txn.oncePerMonth) {
+    } else if (txn.once_per_month) {
       color = "#32CD32"; // Lime green for once per month (colorblind-safe)
       label = "Monthly";
     }
@@ -97,6 +100,13 @@ export const TransactionsTable = ({ transactions, page, setPage }) => {
     setSelectedTxn(null);
   };
 
+  // Handle the delete action
+  const handleDelete = async (txnId) => {
+    // Delete the transaction by filtering it out
+    await deleteTransaction(txnId);
+    setTransactions(transactions.filter((txn) => txn.id !== txnId)); // Assuming each transaction has a unique `id`
+  };
+
   // Paginate transactions
   const paginatedTransactions = transactions.slice(
     page * rowsPerPage,
@@ -125,6 +135,7 @@ export const TransactionsTable = ({ transactions, page, setPage }) => {
                   {!isMobileOrTablet && (
                     <TableCell sx={{ padding: "6px 16px", width: "20%" }}>Status</TableCell>
                   )}
+                  <TableCell sx={{ padding: "6px 16px", width: "5%" }}>Actions</TableCell> {/* Action column */}
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -145,6 +156,12 @@ export const TransactionsTable = ({ transactions, page, setPage }) => {
                     {!isMobileOrTablet && (
                       <TableCell sx={{ padding: "6px 16px" }}>{renderStatusCircle(txn)}</TableCell>
                     )}
+                    <TableCell sx={{ padding: "6px 16px" }}>
+                      {/* Delete icon */}
+                      <IconButton onClick={() => handleDelete(txn.id)} color="error">
+                        <DeleteIcon />
+                      </IconButton>
+                    </TableCell>
                   </TableRow>
                 ))}
               </TableBody>
@@ -175,9 +192,9 @@ export const TransactionsTable = ({ transactions, page, setPage }) => {
                       <strong>Status:</strong>{" "}
                       {selectedTxn.important
                         ? "Important"
-                        : selectedTxn.oncePerQuarter
+                        : selectedTxn.once_per_quarter
                         ? "Quarterly"
-                        : selectedTxn.oncePerMonth
+                        : selectedTxn.once_per_month
                         ? "Monthly"
                         : "Not Specified"}
                     </Typography>
